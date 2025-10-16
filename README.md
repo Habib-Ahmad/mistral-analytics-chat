@@ -3,11 +3,9 @@
 Natural-language → **validated SQL** → **charts**.
 Type a question about your data; the app asks **Mistral**, guards & runs the SQL on **Postgres (Neon)**, and renders a chart with **Recharts**.
 
-> _You’ll add screenshots where noted._ 😉
-
 ---
 
-## ✨ What you get
+## What you get
 
 - **Ask in plain English** → model returns a **JSON plan** (SQL + chart spec).
 - **Guardrails**: SELECT-only, single statement, auto-`LIMIT 200`, basic row normalization.
@@ -16,7 +14,7 @@ Type a question about your data; the app asks **Mistral**, guards & runs the SQL
 
 ---
 
-## 🧱 Stack
+## Stack
 
 - **Next.js (App Router)** + **TypeScript**
 - **Postgres (Neon)** — free serverless tier
@@ -26,7 +24,7 @@ Type a question about your data; the app asks **Mistral**, guards & runs the SQL
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 1. **Clone & install**
 
@@ -69,7 +67,7 @@ Type a question about your data; the app asks **Mistral**, guards & runs the SQL
 
 ---
 
-## 🗂️ Database model (what’s available)
+## Database model (what’s available)
 
 _Feel free to paste a schema screenshot here._
 
@@ -99,7 +97,7 @@ _Feel free to paste a schema screenshot here._
 
 ---
 
-## 🧠 Prompting & Catalog
+## Prompting & Catalog
 
 - **`lib/catalog.ts`**: tiny text summary of allowed tables/columns & business rules.
   Keeps the model grounded (no “`orders.vendor_id`” hallucinations).
@@ -158,7 +156,7 @@ _Feel free to paste a schema screenshot here._
 
 ---
 
-## 🛡️ Safety & reliability
+## Safety & reliability
 
 - **Guardrails**
 
@@ -167,7 +165,7 @@ _Feel free to paste a schema screenshot here._
 
 ---
 
-## 🎨 UI / UX
+## UI / UX
 
 ![Hero Image](screenshots/image-1.png)
 
@@ -194,7 +192,7 @@ _Feel free to paste a schema screenshot here._
 
 ---
 
-## 🔩 Key file tour
+## Key file tour
 
 ```
 app/
@@ -220,7 +218,7 @@ scripts/
 
 ---
 
-## 💡 Examples you can try
+## Examples you can try
 
 **Simple**
 
