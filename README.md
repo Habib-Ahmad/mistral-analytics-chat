@@ -116,7 +116,7 @@ _Feel free to paste a schema screenshot here._
 
 ---
 
-## 🔌 API
+## API
 
 **`POST /api/ask`**
 
