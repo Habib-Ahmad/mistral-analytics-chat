@@ -1,41 +1,27 @@
 "use client";
 
 import { useState } from "react";
-import type { AskResponse } from "@/lib/types";
 
 type Props = {
   defaultModel?: string;
-  onResult: (r: AskResponse) => void;
-  onError: (msg: string) => void;
   busy?: boolean;
   question: string;
   setQuestion: (q: string) => void;
+  onSubmit: (q: string) => Promise<void>;
 };
 
 export default function AskForm({
   defaultModel = "mistral-small-latest",
-  onResult,
-  onError,
   busy,
   question,
   setQuestion,
+  onSubmit,
 }: Props) {
   const [model, setModel] = useState(defaultModel);
 
-  async function run() {
-    try {
-      const res = await fetch("/api/ask", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question, model }),
-      });
-      const data: AskResponse = await res.json();
-      if (!res.ok) throw new Error(data.error || "API error");
-      onResult(data);
-    } catch (e: any) {
-      onError(e?.message || "Request failed");
-    }
-  }
+  const handleClick = async () => {
+    await onSubmit(question);
+  };
 
   return (
     <div className="flex flex-col sm:flex-row gap-3">
@@ -58,7 +44,7 @@ export default function AskForm({
           <option value="mistral-medium-latest">mistral-medium-latest</option>
         </select>
 
-        <button className="btn" onClick={run} disabled={busy}>
+        <button className="btn" onClick={handleClick} disabled={busy}>
           {busy ? "Running…" : "Generate"}
         </button>
       </div>

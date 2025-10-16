@@ -44,11 +44,10 @@ export default function Home() {
       {/* Search / Controls */}
       <section className="card">
         <AskForm
-          onResult={(r) => setResponse(r)}
-          onError={(m) => setError(m)}
           busy={busy}
           question={question}
           setQuestion={setQuestion}
+          onSubmit={runWith}
         />
         {error && <p className="mt-3 text-sm text-rose-400">{error}</p>}
       </section>
