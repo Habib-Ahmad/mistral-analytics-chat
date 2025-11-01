@@ -5,7 +5,7 @@ Type a question about your data; the app asks **Mistral**, guards & runs the SQL
 
 ---
 
-## 🔗 Live Demo
+## Live Demo
 
 [https://your-demo-link.vercel.app](https://mistral-analytics-chat.vercel.app/)
 
