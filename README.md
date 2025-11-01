@@ -5,6 +5,12 @@ Type a question about your data; the app asks **Mistral**, guards & runs the SQL
 
 ---
 
+## 🔗 Live Demo
+
+[https://your-demo-link.vercel.app](https://mistral-analytics-chat.vercel.app/)
+
+---
+
 ## What you get
 
 - **Ask in plain English** → model returns a **JSON plan** (SQL + chart spec).
